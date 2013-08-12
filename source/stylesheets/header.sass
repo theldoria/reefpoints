@@ -1,0 +1,103 @@
+@import load
+
+.mobile-header
+  @media (min-width: 680px)
+    display: none
+
+.desktop-header
+  @media (max-width: 680px)
+    display: none
+
+.logo, .mobile-logo
+  margin:
+    right: auto
+    left: auto
+  display: block
+  background-size: 100%
+  text-indent: -9999px
+
+.logo
+  @media (max-width: 680px)
+    display: none
+
+  @media (min-width: 680px)
+    margin:
+      top: 36px
+    width: 180px
+    height: 107px
+    background-image: url('/assets/logo.png')
+
+.mobile-logo
+  @media (max-width: 680px)
+    padding-top: 48px
+    position: relative
+    width: 246px
+    height: 56px
+    background:
+      image: url('/assets/logo-horiz.png')
+      repeat: no-repeat
+      position: center bottom
+
+  @media (min-width: 680px)
+    display: none
+
+.main-nav
+  @media (max-width: 680px)
+    position: fixed
+    width: 100%
+    background-color: lighten($lgray, 23%)
+    z-index: 0
+
+  @media (min-width: 680px)
+    margin-top: 48px
+    border:
+      width: 1px
+      top-style: solid
+      bottom-style: solid
+      color: lighten($lgray, 15%)
+    background-color: $beige
+    overflow: auto
+
+.main-nav__item
+  padding:
+    top: 1em
+    bottom: 1em
+  font:
+    family: 'niveau grotesk', sans-serif
+    weight: bold
+  text-align: center
+  color: $lgray
+  letter-spacing: 4px
+  +transition-duration(.25s)
+  &:hover
+    color: $red
+
+  @media (max-width: 680px)
+    display: block
+    width: 100%
+    text-align: center
+    &:not(:first-child)
+      border-top: 1px solid rgba($lgray, .25)
+
+  @media (min-width: 680px)
+    width: 18%
+    float: left
+    &:not(:first-child)
+      margin-left: 2.5%
+
+.header-border
+  border-top: 4px solid $red
+  @media (max-width: 680px)
+    position: relative
+    top: 15.25em
+    // height: 10em
+    background:
+      image: url(/assets/bg.png)
+      size: 6px 6px
+    +box-shadow(0 0 10px $lgray)
+
+.work .main-nav__item:first-child,
+.team .main-nav__item:nth-child(2),
+.community .main-nav__item:nth-child(3),
+.contact .main-nav__item:last-child
+  color: $red

@@ -5,7 +5,7 @@
       - if current_page.title
         = current_page.title
       - else
-        DockYard ~ Ruby on Rails and Ember.js Development | Boston-based Web &amp; Mobile Software Consultancy
+        Reefpoints by DockYard
 
     = stylesheet_link_tag :all
     = javascript_include_tag :all
@@ -86,72 +86,11 @@
                       ................
       -->
   %body#blog{class: current_page.category}
-    %header#mobile-header
-      .wrap
-        %a.header-logo{href: '/'} DockYard
-        .menu-button
-      %ul#mobile-nav.flexnav{data: { breakpoint: 481 } }
-        %li.mobile-nav-link-wrap
-          %a.mobile-nav-link{href: 'http://dockyard.com'}
-            %span.mobile-nav-icon.fontello h
-            %p.main-nav-item Home
-        %li.mobile-nav-link-wrap
-          %a.mobile-nav-link{href: 'http://dockyard.com/work'}
-            %span.mobile-nav-icon.fontello w
-            %p.main-nav-item Work
-        %li.mobile-nav-link-wrap
-          %a.mobile-nav-link{href: 'http://dockyard.com/team'}
-            %span.mobile-nav-icon.fontello p
-            %p.main-nav-item Team
-        %li.mobile-nav-link-wrap
-          %a.mobile-nav-link{href: 'http://dockyard.com/community'}
-            %span.mobile-nav-icon.fontello c
-            %p.main-nav-item Community
-        %li.mobile-nav-link-wrap
-          %a.mobile-nav-link{href: '/'}
-            %span.mobile-nav-icon.fontello b
-            %p.main-nav-item Blog
-        %li.mobile-nav-link-wrap
-          %a.mobile-nav-link{href: 'http://dockyard.com/contact'}
-            %span.mobile-nav-icon.fontello m
-            %p.main-nav-item Contact
-
-    %header#site-header
-      .wrap
-        %h1
-          %a.header-logo{href: 'http://dockyard.com'} DockYard
-        %ul.main-nav
-          %li.nav-work
-            %a.main-nav-item{href: 'http://dockyard.com/work'} Work
-          %li.nav-work
-            %a.main-nav-item{href: 'http://dockyard.com/team'} Team
-          %li.nav-work
-            %a.main-nav-item{href: 'http://dockyard.com/community'} Community
-          %li.nav-work
-            %a.main-nav-item.current{href: '/'} Blog
-          %li.nav-work
-            %a.main-nav-item{href: 'http://dockyard.com/contact'} Contact
 
     %section#content
       = yield
 
     %footer
-      %ul.footer-links
-        %li
-          %a.link.link-in-footer.fontello{href: 'https://github.com/DockYard', target: '_blank'} g
-        %li
-          %a.link.link-in-footer.fontello{href: 'https://twitter.com/DockYard', target: '_blank'} t
-        %li
-          %a.link.link-in-footer.fontello{href: 'http://reefpoints.dockyard.com/atom.xml', target: '_blank'} r
-        %li
-          %a.link.link-in-footer.fontello{href: 'http://dockyard.com/contact', target: '_blank'} m
-
-      %form.footer-form
-        %label.footer-form-label Get in touch with us!
-        %input.footer-form-input{type: 'text', placeholder: 'Email'}
-        %button.footer-form-submit.fontello{href: 'http://dockyard.com/contact'} R
-      %a.footer-number{href: 'tel:855-362-5973'} (855) DOCK-YRD
-      %p.footer-copyright &copy; 2013 DockYard, LLC. All Rights Reserved.
 
     %audio.foghorn{preload: 'auto', src: '/sound/foghorn.mp3'}
     :javascript
