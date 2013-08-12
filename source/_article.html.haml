@@ -1,10 +1,12 @@
 %article.index-section
   .wrap
-    .index-post
+    .index__post
       %h2= link_to article.title, article, class: 'index-title'
       - if article.summary
         %p.index-summary= article.summary
+    .index__post__meta
       %time.index-date{datetime: article.date.to_s(:short)}= article.date.to_s(:short)
       - if article.comments
-        %h4
+        &nbsp;-&nbsp;
+        %span
           %a.index-comments{href: "#{article.url}#disqus_thread"}.

@@ -59,23 +59,32 @@
   font-size: 24px
   text-align: center
 
-.index-date
-  font-weight: bold
+#index
+  border-top: 1px solid #CCC
+  background-color: $white
 
 .index-title
-  font-size: 32px
-  font-weight: bold
+  font:
+    size: 30px
+    weight: bold
+  text-transform: uppercase
   line-height: 36px
+  +transition-duration(.25s)
+  +transition-property(opacity)
   &:hover
-    text-decoration: underline
-    color: #F05051
+    opacity: .75
 
-.index-comments
-  opacity: .5
-  &:hover
-    text-decoration: underline
+.index-summary
+  margin-top: .75em
+  font-size: 18px
 
-.index-author:hover, .post-author:hover
+.index__post__meta, .index-comments
+  font:
+    family: 'Niveau Grotesk', sans-serif
+    style: italic
+  color: $gray
+
+.index-author:hover, .post-author:hover, .index-comments:hover
   text-decoration: underline
 
 .post-metas-wrap
