@@ -63,9 +63,6 @@
   font-size: 24px
   text-align: center
 
-strong
-  font-weight: bold
-
 .current
   background-color: #f17275 !important
 
@@ -76,18 +73,23 @@ strong
   padding:
     top: 3em
     bottom: 3em
-  border-bottom: 1px solid #E6E7E8
-
-.index__issue__date
-  font-weight: bold
+  border-top: 1px solid #E6E7E8
+  background-color: $white
+  &:hover, &:active
+    background-color: rgba($white, .5)
 
 .index__issue__title
+  margin-bottom: .5em
   font:
     size: 2em
     weight: bold
-  line-height: 36px
+  text-transform: uppercase
+  line-height: 1.25
+
+.index__issue__meta
+  font-style: italic
+  opacity: .5
 
 .index__issue__comments
-  opacity: .5
   &:hover
     text-decoration: underline
