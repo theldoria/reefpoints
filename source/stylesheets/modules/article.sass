@@ -1,92 +1,3 @@
-@import load
-
-#blog li.nav-blog a
-  background-color: #F26364
-
-.logo
-  position: relative
-  margin-top: .25em
-  margin-bottom: .25em
-  font-family: candyscript, sans-serif
-  text-align: center
-
-@media (min-width: 780px)
-  .logo
-    font-size: 6em
-
-@media (min-width: 400px) and (max-width: 780px)
-  .logo
-    font-size: 5em
-
-@media (max-width: 400px)
-  .logo
-    font-size: 4em
-
-.search_reefpoints label
-  display: none
-
-.search
-  margin-left: auto
-  margin-right: auto
-  margin-bottom: 50px
-  padding: 12px
-  display: block
-  border: 1px solid #CCC
-  -webkit-border-radius: 10px
-  -moz-border-radius: 10px
-  -ms-border-radius: 10px
-  -o-border-radius: 10px
-  border-radius: 10px
-  background-color: #F8F8F8
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif
-  font-size: 24px
-  color: #444
-  &:focus
-    outline: none
-    border-color: #999
-    background: #FCFCFC
-
-@media (min-width: 700px)
-  .search
-    width: 608px
-
-@media (max-width: 700px)
-  .search
-    width: 90%
-
-.nothin
-  display: none
-  font-size: 24px
-  text-align: center
-
-#index
-  border-top: 1px solid #CCC
-  background-color: $white
-
-.index-title
-  font:
-    size: 30px
-    weight: bold
-  text-transform: uppercase
-  line-height: 36px
-  +transition-duration(.25s)
-  +transition-property(opacity)
-  &:hover
-    opacity: .75
-
-.index-summary
-  margin-top: .75em
-  font-size: 18px
-
-.index__post__meta, .index-comments
-  font:
-    family: 'Niveau Grotesk', sans-serif
-    style: italic
-  color: $gray
-
-.index-author:hover, .post-author:hover, .index-comments:hover
-  text-decoration: underline
-
 .post-metas-wrap
   margin-bottom: 2em
   padding: 20px 0
@@ -122,6 +33,10 @@
 .post-div
   width: 720px
   margin: 0 auto
+  @media (max-width: 1100px)
+    top: 2em
+    width: 90%
+    max-width: 720px
 
 .post-share
   margin-top: 2em
@@ -144,9 +59,6 @@
     text-decoration: underline
     &:hover
       color: #F05051
-
-strong
-  font-weight: bold
 
 .post-content
   h2
@@ -178,6 +90,10 @@ strong
   img
     display: block
     margin: 0 auto 2em
+    @media (max-width: 780px)
+      width: 100%
+    @media (min-width: 780px)
+      width: 50%
 
 h1
   &.author-name, &.tag-name, &.categories, &.authors
@@ -201,9 +117,6 @@ ul.categories, ul.authors
       text-decoration: underline
       span.count
         text-decoration: none
-
-.current
-  background-color: #f17275 !important
 
 .authors, .categories
   ul

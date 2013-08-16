@@ -1,0 +1,93 @@
+@import load
+
+.logo
+  margin:
+    top: .25em
+    bottom: .25em
+  position: relative
+  font-family: candyscript, sans-serif
+  text-align: center
+  @media (max-width: 400px)
+    font-size: 4em
+  @media (min-width: 400px) and (max-width: 780px)
+    font-size: 5em
+  @media (min-width: 780px)
+    font-size: 6em
+
+.search_reefpoints label
+  display: none
+
+.search
+  margin:
+    right: auto
+    bottom: 50px
+    left: auto
+  padding: 12px
+  display: block
+  width: 90%
+  max-width: 600px
+  border: 1px solid #CCC
+  +border-radius(10px)
+  background-color: #F8F8F8
+  font:
+    family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif
+    size: 24px
+  color: #444
+  &:focus
+    outline: none
+    border-color: #999
+    background: #FCFCFC
+  @media (max-width: 780px)
+    margin-bottom: 38px
+    width: 85%
+
+.show-all-posts
+  margin:
+    left: auto
+    right: auto
+  display: block
+  width: 90%
+  max-width: 480px
+  text-align: center
+  @media (max-width: 1100px)
+    padding: .75em 0
+    +border-radius(10px)
+    background-color: #ABD4E7
+    font:
+      size: 1.5em
+      weight: bold
+    color: $white
+
+.nothin
+  display: none
+  font-size: 24px
+  text-align: center
+
+strong
+  font-weight: bold
+
+.current
+  background-color: #f17275 !important
+
+.index__issue
+  margin:
+    right: auto
+    left: auto
+  padding:
+    top: 3em
+    bottom: 3em
+  border-bottom: 1px solid #E6E7E8
+
+.index__issue__date
+  font-weight: bold
+
+.index__issue__title
+  font:
+    size: 2em
+    weight: bold
+  line-height: 36px
+
+.index__issue__comments
+  opacity: .5
+  &:hover
+    text-decoration: underline

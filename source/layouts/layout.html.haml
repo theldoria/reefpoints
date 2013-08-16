@@ -91,6 +91,11 @@
       = yield
 
     %footer
+      %nav.footer__links
+        %a.footer__link.fontello-icon{:href => 'https://github.com/dockyard/', :target => '_blank', 'aria-hidden' => 'true', 'data-icon' => '★'}
+        %a.footer__link.fontello-icon{:href => 'https://twitter.com/dockyard', :target => '_blank', 'aria-hidden' => 'true', 'data-icon' => '#'}
+        %a.footer__link.fontello-icon{:href => 'http://reefpoints.dockyard.com/atom.xml', 'aria-hidden' => 'true', 'data-icon' => '❞'}
+        %a.footer__link.fontello-icon{:href => '/contact', 'aria-hidden' => 'true', 'data-icon' => '✉'}
 
     %audio.foghorn{preload: 'auto', src: '/sound/foghorn.mp3'}
     :javascript

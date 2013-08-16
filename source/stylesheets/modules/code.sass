@@ -1,0 +1,61 @@
+@import load
+
+.highlight
+  margin:
+    top: 2em
+    bottom: 2em
+  position: relative
+  border: 1px solid #d1d1d1
+  +border-radius(5px)
+  background-color: $white
+  font:
+    size: 12px
+    family: Menlo, monospace
+  line-height: 16px
+  overflow: hidden
+  +box-shadow(0 1px $white, inset -1px 1px 4px rgba($black, 0.1))
+  .scroller
+    overflow: auto
+  table
+    margin: 0
+    height: 20px
+
+.CodeRay
+  width: 100%
+  td.line-numbers
+    width: 38px
+    border-right: 1px solid #d1d1d1
+    +border-top-left-radius(5px)
+    +border-bottom-left-radius(5px)
+    background-color: #f6f6f6
+    text-align: center
+    color: #b4b4b4
+  td.code
+    padding: 8px 0 8px 13px
+  .tag
+    color: $blue
+  .comment
+    color: $gray
+  .attribute-name
+    color: $blue
+  .content
+    color: darken($blue, 15%)
+  .string
+    color: $blue
+  .keyword
+    color: #ce791f
+  .key, .function
+    color: #2b1fce
+  .local-variable
+    color: #1f58ce
+
+.handlebars
+  .CodeRay
+    .inline
+      &,
+      .inline-delimiter, .delimiter
+        color: lighten($green, 10%)
+      .attribute-name
+        color: $green
+      .attribute-value, .content
+        color: darken($green, 10%)

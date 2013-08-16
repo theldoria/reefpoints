@@ -1,12 +1,10 @@
-%article.index-section
+%a.index__issue{href: article.url}
   .wrap
-    .index__post
-      %h2= link_to article.title, article, class: 'index-title'
-      - if article.summary
-        %p.index-summary= article.summary
-    .index__post__meta
-      %time.index-date{datetime: article.date.to_s(:short)}= article.date.to_s(:short)
-      - if article.comments
-        &nbsp;-&nbsp;
-        %span
-          %a.index-comments{href: "#{article.url}#disqus_thread"}.
+    %h2.index__issue__title= article.title
+    - if article.summary
+      %p.index__issue__summary= article.summary
+    %time.index__issue__date{datetime: article.date.to_s(:short)}= article.date.to_s(:short)
+    - if article.comments
+      &nbsp;-&nbsp;
+      %span
+        %a.index__issue__comments{href: "#{article.url}#disqus_thread"}
